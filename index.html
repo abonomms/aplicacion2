@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Segunda Aplicacion</title>
+<style>
+p
+{
+	border-color:black;
+	border-width:20px;
+}
+p.none{border-style:none;}
+p.dotted{border-style:dotted;}
+p.dashed{border-style:dashed;}
+p.solid{border-style:solid;}
+p.double{border-style:double;}
+p.groove{border-style:groove;}
+p.ridge{border-style:ridge;}
+p.inset{border-style:inset;}
+p.outset{border-style:outset;}
+p.hidden{border-style:hidden;}
+</style>
+<!--grupo CSS-->
+<link rel="stylesheet" href="css/temaapp2.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+<!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js"></script>
+<script src="phonegap.js" type="text/javascript"></script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('imagenes/2.jpg')">
+
+<div data-role="page" id="Principal" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" 	   data-back-btn-theme="a">
+<h1>SEMANA SANTA EN MEXICO </h1>
+</div>
+<div data-role="main" class="ui-content">
+<center>
+<div><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image18','','imagenes/2.jpg',1)"><img src="imagenes/principal.jpg" width="378" height="534" id="Image18"></a></div></center>
+</div>
+<div>
+<ul data-role="listview" data-theme="a" class="ui-listview ui-group-theme-a">
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>¿Qué es la semana santa?</h2>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Religiones que lo celebran</h2>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Semana santa en Atlixco</h2>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Puebla</h2>
+<p>Celebracion en puebla </p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Iztapalapa</h2>
+<p>Celebracion en Iztapalapa</p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina6" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>San Luis Potosi</h2>
+<p>Celebracion en San Luis Potosi</p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina7" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Guerrero</h2>
+<p>Celebracion en Guerrero</p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina8" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Oaxaca</h2>
+<p>Celebracion en Oaxaca</p>
+</a>
+</li>
+</ul>
+</div>
+<div data-role="footer" align="center" data-theme="a">
+  <div>
+  <img src="imagenes/persona_azul.png" width="46" height="46">
+  </div>
+  <div>
+  <h4>Aplicacion Dos</h4>
+  <h4>Rodolfo Cruz Solís</h4>
+  </div>
+  </div>
+  </div>
+  
+<div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+  <h1>¿Qué es la semana santa?</h1>
+ 
+  </div>
+  <div data-role="content" >
+  <div>
+  <p><strong>Semana Santa</strong>, conocida como semana mayor, es un período de 7 días que comienza con el Domingo de Ramos y culmina con el Domingo de Resurrección. Con la Semana Santa,<strong> el cristiano conmemora el Triduo Pascual, es decir, los momentos de la Pasión, la Muerte y la Resurrección de Jesucristo.    </strong>
+   <center>
+     <p> <img src="imagenes/sm1.jpg" width="406" height="169"></p></center>
+  <p>La Semana Santa está precedida por la Cuaresma que se refiere al tiempo de preparación donde se recuerda los 40 días de Jesucristo en el desierto. <strong>Las celebraciones centrales de la Semana Santa son: </strong>Jueves Santo, Viernes Santo, Sábado Santo y Domingo de Resurrección.</p>
+  <p><strong>La Semana Santa</strong>, es el tiempo para dedicarse a la oración y reflexionar en Jesucristo, en los momentos del Triduo Pascual, quien con su infinita misericordia, decide tomar el lugar del hombre y recibir el castigo para liberarlo de los pecados. Asimismo, es el tiempo ideal para el ser humano meditar sobre sus acciones y los cambios que debe realizar para acercarse más a Dios y cumplir con sus mandamientos.</p>
+  <p><img src="imagenes/sm2.jpg" width="410" height="219" align="right"></p>
+  <p>Durante la Semana Santa, el católico cumple con diversos actos, como: procesiones, escenificación del drama de la muerte y pasión de Cristo. Los penitentes se someten a duras cargas como símbolo de su auto sacrificio y, en el día Viernes Santo, los fieles deben de guardar ayuno y abstenerse de comer carne.</p>
+  <p>   
+  </div>
+  </div>
+  <div data-role="footer" data-theme="a">
+  <center><h4>Rodolfo Cruz Solis</h4></center>
+  </div>
+  </div>
+  </div>
+ 
+  <div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+  <h1>Religiones que lo celebran</h1>
+ </div>
+<div data-role="content">
+ <div>
+ <p>La semana santa la celebran los:</p>
+ <ul>
+ 	<li>Cristianos</li>
+    <li>Pentecostales</li>
+    <li>Adventistas</li>
+    </ul>
+ <P><strong> Cristianos </strong></P>
+ <p>Para los miembros de la iglesia cristiana evangélica, la Semana Santa es el tiempo para recordar la muerte de Cristo. Para conmemorarla, se congregan en una jornada de oración y adoración, la cual inicia el Jueves Santo a las 9:00 de la noche y se extiende por 24 horas.</p>
+   <p><img src="imagenes/cristiano.png" width="276" height="154" align="right"></p>
+ <p>En esta reunión se dan cita grupos artísticos y musicales, ya que los cristianos creen que “Dios habita en medio de la alabanza”. Además, para ellos es fundamental la vigilia, es decir, pasar una noche en vela y adorando a Dios. </p>
+ <p>Con panderos, música y cantos, recuerdan la muerte de Jesucristo. La jornada de adoración comienza el jueves en la noche y termina el viernes. En estas 24 horas, la comunidad cristiana ora por los enfermos y por las necesidades de cada una de las personas que habitan en este mundo. </p>
+ 
+ <p><strong> Pentecostales </strong>
+ <p>La celebración de la Semana Santa para los pentecostales inicia el jueves a las dos de la tarde con un desfile, en el cual reparten volantes, entonan canciones e invitan a toda la comunidad a congregarse en una reunión que tiene lugar en su centro de culto a las seis de la tarde.</p> 
+ <p><img src="imagenes/pentecostales.png" width="237" height="175" align="left"></p>
+ <p>Una vez allí en el templo, dan apertura a la fiesta denominada ‘Levántate, hoy es el día de tu salvación’. En este acto se efectúan bautizos, y llevan a cabo cuatro cultos o reuniones especiales.</p>
+ <p>Desde el día jueves se reúnen a alabar a Dios, para ello cuentan con la presencia de grupos musicales, duetos, mariachis y vallenatos, entre otros, porque, en realidad, viven una fiesta. </p>
+ <br>
+<p><strong> Adventistas </strong></p>
+<p>En el sentir de los adventistas, la Semana Santa es la conmemoración de la pasión de Cristo; sin embargo, los seis días los trabajan normalmente, además, no tienen prohibición para ingerir alimentos, aunque tienden a ser vegetarianos.</p> 
+<p><img src="imagenes/adventistas.png" width="237" height="175" align="left"></p>
+<p>“Nosotros nos ceñimos a la Biblia y en ella no dice en ninguna parte que debemos descansar; lo que se señala allí es que hay que descansar antes de la preparación, es decir, el viernes. El sábado es el día de nuestro culto. Y el domingo también oramos. </p>
+<p>“Un acto que reviste de mucha importancia es el lavatorio de pies, pero esto lo hacemos cada tres meses; adicionalmente, hacemos una cena con pan y con vino”, dijo Pedro Obando, adventista desde hace 40 años. </p>
+ </div>
+ </div>
+ <div data-role="footer" data-theme="a">
+ <center><h4>Rodolfo Cruz Solis</h4></center>
+ </div>
+ </div>
+ </div>
+
+ <div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+ <h1>Semana santa en Atlixco</h1>
+ </div>
+ <div data-role="content" align="center">
+ <div>
+ <p>"Sin duda Atlixco ofrece esta temporada una gran variedad de opciones para toda la familia". Por su ubicación, en un hermoso valle, goza de un clima privilegiado considerado el ‘mejor clima del mundo’, el cual permite el amplio desarrollo de la floricultura.</p>
+ <div data-role="collapsible" data-content-theme="false">
+<h1>Evedencia Fotografica</h1>
+<div>
+<img src="imagenes/municipal.jpg"  align="left">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<p><table width="44%" align="left">
+<tr>
+<td align="left" >
+<font size="-3"><p>Una de las cosas mas destacadas en la alfombra de flores frente al palcio municipal.</p></font>
+<br>
+</td>
+</tr>
+</table></p>
+<img src="imagenes/pro1.jpg"  align="right">
+<br><br><br><br><br><br><br><br><br>
+<table align="right" width="44%">
+<tr>
+<td height="74" >
+<font size="-3"><p>La procesion paso por las grandes y hermosas alfombras hechas por la gente de la localidad.</p></font>
+<br>
+</td>
+</tr>
+</table>
+<img src="imagenes/pro2.jpg"  align="left">
+<br><br><br><br><br><br><br><br><br>
+<table align="left" width="44%">
+<tr>
+<td height="74" >
+<font size="-3"><p>La procesion tuvo un gran recorrido con espectadores de diferentes partes.</p></font>
+<br>
+</td>
+</tr>
+</table>
+<img src="imagenes/alf.jpg"  align="right">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<table align="right" width="44%">
+<tr>
+<td height="74" >
+<font size="-3"><p>Las alfombras son muy comunes en estas fechas, que son hechos por los locales.</p></font>
+<br>
+</td>
+</tr>
+</table>
+<img src="imagenes/alf2.jpg"  align="left">
+<br><br><br><br><br><br><br><br><br>
+<table align="left" width="44%">
+<tr>
+<td height="74" >
+<font size="-3"><p>En esta fecha podremos ver diferente de variedad de alfombras colores, tamaños, creatividad, etc.</p></font>
+<br>
+</td>
+</tr>
+</table>
+</div>
+</div>
+ </div>
+ </div>
+ <div data-role="footer" data-theme="a">
+ <center><h4>Rodolfo Cruz Solis</h4></center>
+ </div>
+ </div>
+ </div>
+
+ <div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+ <h1>Semana santa en Puebla</h1>
+ </div>
+ <div data-role="content" align="center">
+ <div>
+<p> La celebración de Semana Santa es para los poblanos una de las conmemoraciones más importantes del año cristiano; durante estos días aquellas personas que profesan alguna de las diferentes confesiones de la fe cristiana acuden a las iglesias más emblemáticas de Puebla para recordar la Pasión, Muerte y Resurrección de Jesús de Nazaret.</p>
+<p>Una de los actos mas significativos durante la semana santa es la tradicional Procesión de Viernes santo, misma que este 2016 cumple 25 años y que es considerada de las mas grandes del país.</p>
+<p class="double"><img src="imagenes/smpue.jpg"></p>
+ </div>
+ </div>
+ <div data-role="footer" data-theme="a">
+ <center><h4>Rodolfo Cruz Solis</h4></center>
+ </div>
+ </div>
+ 
+<div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+ <h1>Semana santa en Iztapalapa</h1>
+ </div>
+ <div data-role="content" align="center">
+ <div>
+ <p> En Iztapalapa tiene lugar una ceremonia, fiesta y representación de la Pasión, que no responde ni a una narración sacra, ni a un teatro tradicional: es una expresión de múltiples aportaciones que se funde en una particular sincretización.</p>
+<p>Los misioneros utilizaron el teatro para catequizar a los antiguos mexicanos y desterrar así las prácticas religiosas anteriores. Las escenificaciones de la Pasión, conmovían profundamente a los espectadores; así, el teatro de los evangelizadores actuó en favor de la cristianización. Del pasado llegan las voces que amalgaman en el presente una forma particular de sincretismo, dondelas viejas costumbres, los componentes internos y externos del drama, se llenan de nuevos contenidos sin desalojar completamente a las anteriores.</p>
+<p class="double"><img src="imagenes/smizt.jpg"></p>
+ </div>
+ </div>
+ <div data-role="footer" data-theme="a">
+ <center><h4>Rodolfo Cruz Solis</h4></center>
+ </div>
+ </div>
+ 
+ 
+<div data-role="page" id="Pagina6" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+ <h1>Semana santa en San Luis Potosi</h1>
+ </div>
+ <div data-role="content" align="center">
+ <div>
+ <p>Esta temporada, la ciudad de San Luis Potosí y sus alrededores te aguardan con numerosos atractivos para que vivas días llenos de tradición, pero también de alegría y diversión.</p>
+ <p>A tan sólo 25 km de San Luis Potosí, rumbo a Zacatecas, se localiza Mexquitic de Carmona, un pueblo más antiguo que la capital misma, el cual sirvió como punto de avanzada para el descubrimiento de las minas de plata que dieron fama a toda esta región del Gran Tunal. Su principal atractivo, prácticamente inadvertido por los no potosinos, es una presa donde se realizan paseos en lancha, deportes acuáticos y pesca. Ahora bien, para el conocedor, el Museo-Zoológico José Villet ofrece una interesante oportunidad de apreciar objetos relativos a las ciencias naturales, un magro acuario y una notable colección de animales de diversas partes del país y del mundo; y aún más, para el buscador de maravillas, la parroquia de San Miguel resulta una pequeña joyita digna de admirarse a detalle. Originalmente de un convento franciscano del siglo XVI, el altar de la iglesia posee un asombroso retablo de 1630, de estilo churrigueresco con filigrana.</p>
+ <p class="double"><img src="imagenes/smsan.jpg"></p>
+ </div>
+ </div>
+ <div data-role="footer" data-theme="a">
+ <center><h4>Rodolfo Cruz Solis</h4></center>
+ </div>
+ </div>
+ 
+ 
+<div data-role="page" id="Pagina7" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+ <h1>Semana santa en Guerrero</h1>
+ </div>
+ <div data-role="content" align="center">
+ <div>
+ <p>Uno de los atractivos turísticos más importantes que tiene el estado de Guerrero es la celebración de la Semana Santa en Taxco, ceremonia litúrgica conmovedora e impresionante, única en toda la República Mexicana. Parte fundamental en su desarrollo lo constituyen las dramáticas procesiones donde las imágenes religiosas son acompañadas, a lo largo de las empedradas calles de la ciudad, por cofradías de penitentes encapuchados, vestidos de negro y arrastrando cadenas que llevan sujetas a sus tobillos.</p>
+ <p class="double"><img src="imagenes/smgue.jpg"></p>
+ </div>
+ </div>
+ <div data-role="footer" data-theme="a">
+ <center><h4>Rodolfo Cruz Solis</h4></center>
+ </div>
+ </div>
+ 
+ 
+<div data-role="page" id="Pagina8" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+ <h1>Semana santa en Oaxaca</h1>
+ </div>
+ <div data-role="content" align="center">
+ <div>
+<p> Dentro de la gama de festejos religiosos para los Oaxaqueños la cuaresma y la Semana Santa reviste gran significado.</p>
+<p>El Primer Viernes de Cuaresma la Festividad del Señor de Las Misericordias en el Templo de San Juan de Dios, el Segundo Viernes de Cuaresma la Festividad del Señor de Las Maravillas en el Templo de La Defensa , el Cuarto Viernes de Cuaresma la Festividad de la Samaritana en la Ciudad de Oaxaca, el Quinto Viernes de Cuaresma la festividad del Señor de las Peñas en el Templo del Carmen Alto y la Festividad del Señor San Lázaro en la Villa de San Antonino Castillo Velasco.</p>
+<p class="double"><img src="imagenes/smoa.jpg"></p>
+   <div data-role="collapsible" data-content-theme="false">
+<h1>NOTA:</h1>
+<div>
+<P>RUTA DE LA PROCESIÓN </P>
+<P>Salida de la Parroquia de la Sangre de Cristo, sobre Macedonio Alcalá, continuando en la calle de Xolotl, dando vuelta en García Vigil hasta la calle de Morelos, retomando Macedonio Alcalá para terminar en lugar de inicio.</P>
+</div>
+</div>
+ </div>
+ </div>
+ <div data-role="footer" data-theme="a">
+ <center><h4>Rodolfo Cruz Solis</h4></center>
+ </div>
+ </div>
+ 
+
+
+</body>
+ </html>
